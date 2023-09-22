@@ -1,0 +1,675 @@
+{
+	"info": {
+		"_postman_id": "990dfe20-4bff-4200-a59d-2041651ce95e",
+		"name": "Server",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29692076"
+	},
+	"item": [
+		{
+			"name": "Get All Vehicle Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles of A Colour",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/colour/<COLOUR HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"colour",
+						"<COLOUR HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles of A Colour and of A Certain Make",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/<MAKE>/<COLOUR>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"<MAKE>",
+						"<COLOUR>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Vehicle from VRM",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/vrm/<VRM HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"vrm",
+						"<VRM HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles in a Category",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/category/<CATEGORY HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"category",
+						"<CATEGORY HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles With x No. Seats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/numberSeats/<SEATS NUMBER>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"numberSeats",
+						"<SEATS NUMBER>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles With x Day Rate",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/dayRate/<dayRate HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"dayRate",
+						"<dayRate HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles From the Same Branch",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/branch/<BRANCH HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"branch",
+						"<BRANCH HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles of A Make",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/make/<CAR MAKE HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"make",
+						"<CAR MAKE HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles Unavailable to Rent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/status/RENTED",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"status",
+						"RENTED"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Vehicles Available to Rent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/status/AVAILABLE",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"status",
+						"AVAILABLE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customer Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Customers From a Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers/country/<COUNTRY>",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"country",
+						"<COUNTRY>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Vehicle",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"make\": \"<MAKE>\",\n        \"model\": \"<MODEL>\",\n        \"colour\": \"<COLOUR>\",\n        \"vin\": \"<VIN>\",\n        \"year\": <YEAR> ,\n        \"vrm\": \"<VRM>\",\n        \"category\": \"<CATEGORY>\",\n        \"numberSeats\": \"<NUMBER OF SEATS>\",\n        \"dayRate\": \"<DAY RATE>\",\n        \"status\": \"<STATUS>\",\n        \"fuelEconomy\": <FUEL ECONOMY>,\n        \"branch\": \"<BRANCH>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Vehicle",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/vehicles/<VRM NUMBER HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"<VRM NUMBER HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rent a Vehicle",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"RENTED\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/vehicles/<VRM>/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"<VRM>",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return a Vehicle",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"AVAILABLE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/vehicles/<VRM>/status",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"vehicles",
+						"<VRM>",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add a Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"first_name\": \"<FIRST NAME>\",\n        \"last_name\": \"<LAST NAME>\",\n        \"dob\": \"<DATE OF BIRTH DD/MM/YY>\",\n        \"gender\": \"<GENDER>\",\n        \"email\": \"<EMAIL>\",\n        \"address\": \"<ADDRESS>\",\n        \"city\": \"<CITY>\",\n        \"country\": \"<COUNTRY>\",\n        \"drivingLicenseNumber\": \"<DRIVING LICENSE NUMBER>\",\n        \"passportNumber\": \"<PASSPORT NUMBER>\",\n        \"LicenseRetrictions\": null,\n        \"ip_address_v4\": \"<IPV4 ADDRESS>\",\n        \"ip_address_v6\": \"<IPV6 ADDRESS>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:5000/customers",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:5000/customers/<PASSPORT NUMBER HERE>",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"<PASSPORT NUMBER HERE>"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change a Customer's Country",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"country\": \"<COUNTRY>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers/<PASSPORT NUMBER>/country",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"<PASSPORT NUMBER>",
+						"country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change a Customer's City",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"city\": \"<CITY>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers/<PASSPORT NUMBER>/city",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"<PASSPORT NUMBER>",
+						"city"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change a Customer's Address",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"<ADDRESS>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers/<PASSPORT NUMBER>/address",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"<PASSPORT NUMBER>",
+						"address"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change a Customer's Email",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"<EMAIL>\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers/<PASSPORT NUMBER>/email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers",
+						"<PASSPORT NUMBER>",
+						"email"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
