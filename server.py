@@ -9,6 +9,18 @@ with open("vehicle.json") as vehicleJson:
 with open ("customer.json") as customerJson:
     customer_data = json.load(customerJson) #Loads the customer's data from json
 
+# create functions to write changes back to original files, one for vehicles and one for customer
+def save_vehicles():
+    with open("vehicle.json", "w") as vehicleJson:
+        vehicleJson.write(vehicle_data)
+    vehicleJson.close()
+
+
+def save_customers():
+    with open("vehicle.json", "w") as customerJson:
+        customerJson.write(customer_data)
+    customerJson.close()
+   
 vehicle_id = len(vehicle_data) + 1
 customer_id = len(customer_data) + 1  #setting id values for both vehicle and customer, so when a record is added, it wil auto increment
 
@@ -152,6 +164,7 @@ def add_vehicle():
             vehicle_id += 1 #increments the vehicle_id by 1 
 
             vehicle_data.append(new_vehicle) #Adds the new vehicle record to the json
+            save_vehicles()
             return jsonify({"message": "Vehicle added successfully"}), 200
         
         else:
@@ -168,7 +181,7 @@ def remove_vehicle(vrm):
 
     if vehicle_to_delete is not None:
         removed_vehicle = vehicle_data.pop(vehicle_to_delete)  # Removes the vehicle
-
+        save_vehicles()
         return jsonify({"message": "Vehicle removed successfully", "removed_vehicle": removed_vehicle}), 200
     
     else:
@@ -186,7 +199,7 @@ def change_vehicle_color(vrm):
 
     if status_to_update is not None:
         vehicle_data[status_to_update]["status"] = updated_status #sets the staus to rented
-
+        save_vehicles()
         return jsonify({"message": "The vehicle has been rented"}), 200
     
     else:
@@ -220,6 +233,7 @@ def add_customer():
             customer_id += 1 #increments the customer_id by 1
 
             customer_data.append(new_customer)
+            save_customers()
             return jsonify({"message": "Customer added successfully"}), 200
         
         else:
@@ -236,7 +250,7 @@ def remove_customer(passportNumber):
 
     if customer_to_delete is not None:
         removed_customer = customer_data.pop(customer_to_delete)  # Removes the customer
-
+        save_customers()
         return jsonify({"message": "Customer removed successfully", "removed_customer": removed_customer}), 200
     
     else:
@@ -255,7 +269,7 @@ def change_customer_color(passportNumber):
 
     if country_to_update is not None:
         customer_data[country_to_update]["country"] = updated_country
-
+        save_customers()
         return jsonify({"message": "The customer's country of residence has been changed"}), 200
     
     else:
@@ -273,7 +287,7 @@ def change_customer_city(passportNumber):
 
     if city_to_update is not None:
         customer_data[city_to_update]["city"] = updated_city
-
+        save_customers()
         return jsonify({"message": "The customer's city of residence has been changed"}), 200
     
     else:
@@ -291,7 +305,7 @@ def change_customer_address(passportNumber):
 
     if address_to_update is not None:
         customer_data[address_to_update]["address"] = updated_address
-
+        save_customers()
         return jsonify({"message": "The customer's address of residence has been changed"}), 200
     
     else:
@@ -309,7 +323,7 @@ def change_customer_email(passportNumber):
 
     if email_to_update is not None:
         customer_data[email_to_update]["email"] = updated_email
-
+        save_customers()
         return jsonify({"message": "The customer's email has been changed"}), 200
     
     else:
